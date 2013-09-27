@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="scripts/d3.groupedBars.js"></script>
+		<script type="text/javascript" src="vendors/d3/d3.v3.js"></script>
+		<link href="styles/app.css" rel="stylesheet">
+	</head>
+
+	<body>
+	<h2>Exemple de graphe mixte</h2>
+		
+		
+		<div id="mens"></div>
+		<br>
+		<div id="hebd"></div>
+		<br>
+		<div id="trim"></div>
+		
+
+
+		<script type="text/javascript">
+			
+	var data2s ={
+				label: "Montant( € )",
+                data: [
+					{
+						"item": "Janvier",
+						"AgenceX": "25600",
+						"AgenceY" :"11500",
+						"AgenceZ" :"45000"
+					},
+					{
+						"item": "Fevrier",
+						"AgenceX": "15000",
+						"AgenceY" :"2000",
+						"AgenceZ" :"25600"
+					},
+					{
+						"item": "Mars",
+						"AgenceX": "30443",
+						"AgenceY" :"41041",
+						"AgenceZ" :"7400"
+					},
+					{
+						"item": "Avril",
+						"AgenceX": "20612",
+						"AgenceY" :"30858",
+						"AgenceZ" :"45000"
+					}
+				]};	
+          drawGroupedBars(data2s,"mens");
+		</script>
+
+	</body>
+</html>

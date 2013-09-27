@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="prototype/scripts/d3.groupedBars.js"></script>
+		<script type="text/javascript" src="prototype/vendors/d3/d3.v3.js"></script>
+		<script type="text/javascript" src="prototype/vendors/jquery/jquery-2.0.2.min.js"></script>
+		<script type="text/javascript" src="prototype/scripts/helper.js"></script>
+		<script type="text/javascript" src="prototype/scripts/launcher.js"></script>
+
+		<link href="prototype/styles/styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+
+		<header></header>
+		
+		<div id='container' class="clearfix">
+			<div id='id-filters' class="filters clearfix">
+				<div class='selectBox'>
+					<input type="hidden" value="3" class="price_values"/>
+					    <span class='selected'>Challenges</span>
+					    <span class='selectArrow'>&#9660</span>
+					    <ul class="selectOptions">
+						    Challenges
+					    </ul>
+				</div>
+
+				<div class="printer">
+					
+				</div>
+			</div>
+
+			<div class="histogram clearfix">	
+				<div id="id-chart"></div>
+			</div>
+		</div>
+		<div id="" class="after-container">
+			<div><span class="challenge">Chalenge</span></div>
+			<div><span class="produit">Produit</span></div>
+			<div><span class="periode">Periode </span></div>
+			<div><span class="agences">Periode </span></div>
+		</div>
+
+
+
+		<footer></footer>
+		
+		
+		<script type="text/javascript">
+			
+
+
+	var data2s = {
+		
+		unite: "Montant( € )",
+		valeurs: [{
+				"periode": "Janvier",
+				"AgenceX": "25600",
+				"AgenceY": "11500",
+				"AgenceZ": "45000"
+			}, {
+				"periode": "Fevrier",
+				"AgenceX": "15000",
+				"AgenceY": "2000",
+				"AgenceZ": "25600"
+			}, {
+				"periode": "Mars",
+				"AgenceX": "30443",
+				"AgenceY": "41041",
+				"AgenceZ": "7400"
+			}, {
+				"periode": "Avril",
+				"AgenceX": "20612",
+				"AgenceY": "30858",
+				"AgenceZ": "45000"
+			}
+		]
+	};
+          drawGroupedBars(data2s,"id-chart");
+		</script>
+
+	</body>
+</html>

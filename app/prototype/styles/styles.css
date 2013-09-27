@@ -1,0 +1,311 @@
+@font-face {
+  font-family: 'Dosis Regular';
+  line-height: 0.875;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dosis Regular'), local('Dosis-Regular'), url('dosis/xIAtSaglM8LZOYdGmG1JqQ.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Dosis SemiBold';
+  line-height: 0.875;
+  font-style: normal;
+  src: local('Dosis SemiBold'), local('Dosis Regular'), url('dosis/Dosis-SemiBold.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('openSans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+html{
+  font-family: 'Dosis Regular';
+  font-style: normal;
+
+}
+
+body{
+  font-family: 'Dosis Regular';
+  font-style: normal;
+  background-image: url("img/body-bg.png");
+    height:100%;
+}
+
+header {
+    margin-top: -5px;
+    background-image: url("img/header.png");
+    border-bottom: 1px solid rgb(213, 210, 211);
+    margin-bottom: 28px;
+    height: 100px;
+    z-index: 1;
+}
+
+footer {
+    position: fixed;
+    margin: auto;
+    width: 80%;
+    bottom: 0px;
+    height: 50px;
+    z-index: 1;
+    transition-duration: 0.15s;
+}
+
+
+
+svg{
+  display:block;
+  margin:auto;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.axis text{
+  font-size: 12px;        
+}
+
+.line {
+ fill: none;
+ stroke: #FF4444;
+ stroke-width: 1.5px;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 25px;
+  font: 9px Helvetica,sans-serif;
+  background: #FFF;
+  border: 0px;
+  border-radius: 6px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  text-shadow: 0px 1px 0px #ccc;
+}
+
+.legend {
+  padding: 5px;
+  font: 10px sans-serif;
+  background: yellow;
+  box-shadow: 2px 2px 1px #888;
+}
+
+
+#container{
+  border:2px solid rgb(210,210,210);
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.filters{
+  border:1px ;
+  width: 100%;
+}
+
+
+div.selectBox {
+
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    text-align: left;
+    line-height: 30px;
+    clear: both;
+    color: rgb(114, 97, 97);
+}
+
+span.selected {
+    cursor:pointer;
+    width: 167px;
+    text-indent: 10px;
+    border: 1px solid rgb(233, 233, 233);
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #f6f6f6;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background-image: -moz-linear-gradient( 90deg, rgb(210,210,210) 0%, rgb(227,227,228) 36%, rgb(243,243,246) 99%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(210,210,210) 0%, rgb(227,227,228) 36%, rgb(243,243,246) 99%);
+    background-image: -ms-linear-gradient( 90deg, rgb(210,210,210) 0%, rgb(227,227,228) 36%, rgb(243,243,246) 99%);
+    
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+span.selectArrow {
+    cursor:pointer;
+    width: 30px;
+    border: 1px solid #60abf8;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background: #4096ee;
+    color: #fff;
+}
+
+span.selectArrow,span.selected {
+    position: relative;
+    float: left;
+    height: 30px;
+    z-index: 1;
+}
+
+ul.selectOptions {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 198px;
+    border: 1px solid #ccc;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+    background: rgb(210,210,210)
+    padding-top: 2px;
+    display: none;
+    margin: 0;
+    list-style: none inside none;
+    padding-left: 0;
+}
+
+li.selectOption {
+    display: block;
+    line-height: 20px;
+    padding: 5px 0 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: arial, sans-serif;
+    list-style: none;
+    margin: 0;
+}
+
+li.selectOption:hover {
+    color: #f6f6f6;
+    background: #4096ee;
+}
+
+.histogram{
+  border:1px  green;
+  width:100%;
+}
+
+.clearfix {
+    margin-top: 2px;
+    display: inline-block;
+}
+
+#id-chart{
+    margin-top: 50px;
+}
+
+.printer{
+  border-radius: 10px solid;
+  border:1px solid red;
+  cursor: pointer;
+  background-image:url("img/imprimer.png");
+  width: 95px;
+  float:right;
+  position:relative;
+  border:1px ;
+  height:23px;  
+}
+
+.after-container{
+  margin-top: 10px;
+  margin-right: 200px;
+  margin-left: 200px;
+  border:2px solid rgb(210,210,210);
+  height:100px;
+}
+
+
+.tooltip {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-size: 17px;
+    font-family: "Dosis Regular";
+    border-bottom: 1px dotted #000000; color: #000000; outline: none;
+    text-decoration: none;
+    border-radius: 5px 5px; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    position: absolute; 
+    left: 1em; 
+    top: 2em; 
+    z-index: 10;
+    margin-left: 0; 
+    width: 150px;
+    display: block;
+    background-color: rgb(227,227,228);
+    /*background-image: -moz-linear-gradient( 90deg, rgb(210,210,210) 0%, rgb(227,227,228) 36%, rgb(243,243,246) 99%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(210,210,210) 0%, rgb(227,227,228) 36%, rgb(243,243,246) 99%);
+    background-image: -ms-linear-gradient( 90deg, rgb(210,210,210) 0%, rgb(227,227,228) 36%, rgb(243,243,246) 99%);*/
+    box-shadow: 0.5px 0.866px 4px 0px rgb( 0, 0, 0 );
+    padding: 0.5em 0.8em 0.8em 2em;
+    height : 80px;
+}
+
+ 
+
+.tooltip h{
+    font-size: 25px;
+    color: rgb( 26, 23, 27 );
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.tooltip a{
+    font-size: 32px;
+    font-family: "Open Sans";
+    color: rgb( 9, 151, 112 );
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.tooltip:before{
+   content:"";
+   position: absolute;
+  
+   /*width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid #efeef3;
+   border-bottom: 13px solid transparent;*/
+
+    background-color: rgb(227,227,228);
+    box-shadow: 3px 3px 4px #000;
+    width: 20px;
+    height: 20px;
+    
+    /* Translate the box up by width / 2 then rotate */
+    -webkit-transform: translateY(103px) rotate(45deg) translateX(-35px);
+    z-index: 1;
+
+}
+
+.challenge{
+  font-family: "Dosis-SemiBold";
+  
+}
